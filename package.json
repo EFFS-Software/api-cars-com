@@ -1,0 +1,12 @@
+{
+  "name": "api-cars-com",
+  "version": "1.0.0",
+  "description": "Api de carros con sus datos generales.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
