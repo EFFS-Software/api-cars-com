@@ -9,4 +9,21 @@ CREATE Table
         anio INTEGER
     );
 
+INSERT INTO
+    tbl_cars (marca, modelo, color, anio)
+VALUES ('Mazda', '626', 'Rojo', 1981);
+
+INSERT INTO
+    tbl_cars (marca, modelo, color, anio)
+VALUES (
+        'Nissan',
+        'Sentra',
+        'Blanco',
+        1986
+    );
+
+INSERT INTO
+    tbl_cars (marca, modelo, color, anio)
+VALUES ('Kia', 'Sephia', 'Azul', 2001);
+
 SELECT *from tbl_cars;

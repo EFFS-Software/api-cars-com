@@ -2,10 +2,11 @@ const pgp = require('pg-promise')();
 const user = 'postgres';
 const pass = 'Conexion2023#$';
 const host = 'localhost';
+const port = 5432;
 const dbName = 'postgres'
-//const cmdCnx = `postgres://${user}:${pass}@${host}:5432/${dbName}`;
-const cmdCnx = `postgres://${user}:${pass}@${host}:5432/${dbName}`;
-
+// Codificar la contraseña
+const encodedPassword = encodeURIComponent(pass);
+const cmdCnx = `postgres://${user}:${encodedPassword}@${host}:${port}/${dbName}`;
 const db  = pgp(cmdCnx);
 
 db.connect()
@@ -15,5 +16,4 @@ db.connect()
   .catch ( (err)=>{
     console.log(`Error de Conexión ${err}`);
   });
-
 module.exports = db;
